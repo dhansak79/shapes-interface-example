@@ -17,9 +17,9 @@ class CubeTest {
   void getVolume() {
     Cube cube = new Cube( 5.0 );
     BigDecimal volume = cube.getVolume();
-    assertEquals( new BigDecimal( "125.000" ), volume );
+    assertEquals( new BigDecimal( "125.00" ), volume );
 
     //assertJ example
-    assertThat(volume).isEqualByComparingTo( new BigDecimal("125") );
+    assertThat( volume ).isEqualByComparingTo( new BigDecimal( "125" ) );
   }
 }
