@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 public class Cube implements Shape, ThreeDimensionalShape {
 
   private final double edge;
+
   public Cube( double edge ) {
     this.edge = edge;
   }

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CubeTest {
 
@@ -14,8 +14,8 @@ class CubeTest {
 
   @Test
   void getVolume() {
-    Cube cube = new Cube(5.0);
+    Cube cube = new Cube( 5.0 );
     BigDecimal volume = cube.getVolume();
-    assertEquals(new BigDecimal("125.000"), volume);
+    assertEquals( new BigDecimal( "125.000" ), volume );
   }
 }

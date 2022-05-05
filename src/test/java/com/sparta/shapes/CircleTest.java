@@ -10,7 +10,7 @@ public class CircleTest {
 
   @Test
   public void surfaceAreaOfACircle() {
-    Circle circle = new Circle(15);
+    Circle circle = new Circle( 15 );
     BigDecimal actualSurfaceArea = circle.getSurfaceArea();
     Assertions.assertEquals( new BigDecimal( "706.50" ), actualSurfaceArea );
   }
