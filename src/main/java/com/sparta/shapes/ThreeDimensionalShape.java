@@ -1,7 +1,9 @@
 package com.sparta.shapes;
 
+import java.math.BigDecimal;
+
 public interface ThreeDimensionalShape {
 
-  double getVolume();
+  BigDecimal getVolume();
 
 }
