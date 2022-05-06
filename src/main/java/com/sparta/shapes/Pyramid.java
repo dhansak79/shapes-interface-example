@@ -19,8 +19,8 @@ public class Pyramid implements Shape, ThreeDimensionalShape {
   public BigDecimal getSurfaceArea() {
     BigDecimal b = BigDecimal.valueOf( base );
     BigDecimal bSqr = b.pow( 2 );
-    BigDecimal underRoot = bSqr.divide( new BigDecimal( 4 ) ).add( BigDecimal.valueOf( height ).pow( 2 ) );
-    MathContext mathCont = new MathContext( 4 );
+    BigDecimal underRoot = bSqr.divide( new BigDecimal( 4 ), 2, RoundingMode.HALF_UP ).add( BigDecimal.valueOf( height ).pow( 2 ) );
+    MathContext mathCont = new MathContext( 10 );
     BigDecimal rooted = underRoot.sqrt( mathCont );
     BigDecimal result = bSqr.add( rooted.multiply( b ).multiply( new BigDecimal( 2 ) ) );
 
@@ -30,10 +30,16 @@ public class Pyramid implements Shape, ThreeDimensionalShape {
   @Override
   public BigDecimal getVolume() {
     BigDecimal a = BigDecimal.valueOf( base ).pow( 2 );
-    BigDecimal h = BigDecimal.valueOf( height ).divide( new BigDecimal( "3" ) );
+    BigDecimal h = BigDecimal.valueOf( height ).divide( new BigDecimal( "3" ), 2, RoundingMode.HALF_UP );
 
     return a.multiply( h ).setScale( 2, RoundingMode.HALF_UP );
   }
 
+  @Override
+  public String toString() {
+    return "Shape: Pyramid, Base: " + base + ", Height: " + height + ", Surface Area: " + getSurfaceArea() + ", Volume: " + getVolume();
+
+//    "Shape: Pyramid, Base: 6.0, Height: 2.0, Surface Area: 79.27"
+  }
 
 }

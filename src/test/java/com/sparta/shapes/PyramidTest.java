@@ -24,4 +24,11 @@ public class PyramidTest {
     assertEquals( new BigDecimal( "16.00" ), actualVolume );
   }
 
+  @Test
+  void getString() {
+    Pyramid pyramid = new Pyramid( 2, 6 );
+    String result = pyramid.toString();
+    Assertions.assertEquals( "Shape: Pyramid, Base: 6.0, Height: 2.0, Surface Area: 79.27, Volume: 24.12", result );
+  }
+
 }
