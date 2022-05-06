@@ -31,4 +31,7 @@ public class Triangle implements Shape {
     return "Shape: Triangle, Base: " + base + ", Height: " + height + ", Surface Area: " + getSurfaceArea();
   }
 
+  public String iAmA() {
+    return "I AM A TRIANGLE OF AREA " + getSurfaceArea() + " AND I AM " + colour + "!";
+  }
 }

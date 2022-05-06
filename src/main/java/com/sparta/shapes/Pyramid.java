@@ -46,7 +46,9 @@ public class Pyramid implements Shape, ThreeDimensionalShape {
   @Override
   public String toString() {
     return "Shape: Pyramid, Base: " + base + ", Height: " + height + ", Surface Area: " + getSurfaceArea() + ", Volume: " + getVolume();
-
   }
 
+  public String iAmA() {
+    return "I AM A PYRAMID OF VOLUME " + getVolume() + " AND I AM " + colour + "!";
+  }
 }

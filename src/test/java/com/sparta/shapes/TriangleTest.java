@@ -5,24 +5,29 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-
 class TriangleTest {
 
   @Test
-  void getSurfaceArea() {
+  public void getSurfaceArea() {
     Triangle triangle = new Triangle( 12, 7 );
     BigDecimal surfaceArea = triangle.getSurfaceArea();
 
-    assertEquals( new BigDecimal( "42.00" ), surfaceArea );
+    Assertions.assertEquals( new BigDecimal( "42.00" ), surfaceArea );
   }
 
   @Test
-  void getString() {
+  public void getString() {
     Triangle triangle = new Triangle( 5, 5 );
     String result = triangle.toString();
-    assertEquals( "Shape: Triangle, Base: 5.0, Height: 5.0, Surface Area: 12.50", result );
+    Assertions.assertEquals( "Shape: Triangle, Base: 5.0, Height: 5.0, Surface Area: 12.50", result );
   }
 
+  @Test
+  public void iAmATriangle() {
+    Triangle greenTriangle = new Triangle( 5, 7, Colour.GREEN );
+
+    String actualResult = greenTriangle.iAmA();
+
+    Assertions.assertEquals( "I AM A TRIANGLE OF AREA 17.50 AND I AM GREEN!", actualResult );
+  }
 }

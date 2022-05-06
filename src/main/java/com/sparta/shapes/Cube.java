@@ -2,7 +2,6 @@ package com.sparta.shapes;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.zip.CheckedOutputStream;
 
 public class Cube implements Shape, ThreeDimensionalShape {
 
@@ -34,7 +33,9 @@ public class Cube implements Shape, ThreeDimensionalShape {
     return "Shape: Cube, Edge: " + edge + ", Surface Area: " + getSurfaceArea() + ", Volume: " + getVolume();
   }
 
-
+  public String iAmA() {
+    return "I AM A CUBE OF VOLUME " + getVolume() + " AND I AM " + colour + "!";
+  }
 }
 
 

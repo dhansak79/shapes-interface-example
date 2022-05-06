@@ -28,4 +28,8 @@ public class Circle implements Shape {
   public String toString() {
     return "Shape: Circle, Radius: " + radius + ", Surface Area: " + getSurfaceArea();
   }
+
+  public String iAmA() {
+    return "I AM A CIRCLE OF RADIUS " + radius + " AND I AM " + colour + "!";
+  }
 }

@@ -10,15 +10,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class CubeTest {
 
   @Test
-  void getSurfaceArea() {
+  public void getSurfaceArea() {
     Cube cube = new Cube( 7.0 );
     BigDecimal surfaceArea = cube.getSurfaceArea();
 
-    assertEquals( new BigDecimal( "294.00" ),surfaceArea);
+    assertEquals( new BigDecimal( "294.00" ), surfaceArea );
   }
 
   @Test
-  void getVolume() {
+  public void getVolume() {
     Cube cube = new Cube( 5.0 );
     BigDecimal volume = cube.getVolume();
 
@@ -26,11 +26,19 @@ class CubeTest {
   }
 
   @Test
-  void  getString(){
+  public void getString() {
     Cube cube = new Cube( 3 );
     String result = cube.toString();
     Assertions.assertEquals( "Shape: Cube, Edge: 3.0, Surface Area: 54.00, Volume: 27.00", result );
 
   }
 
+  @Test
+  public void iAmACube() {
+    Cube blueCube = new Cube( 5, Colour.BLUE );
+
+    String actualResult = blueCube.iAmA();
+
+    Assertions.assertEquals( "I AM A CUBE OF VOLUME 125.00 AND I AM BLUE!", actualResult );
+  }
 }
