@@ -17,4 +17,13 @@ public class CircleTest {
     assertEquals( new BigDecimal( "706.50" ), actualSurfaceArea );
   }
 
+  @Test
+  public void circleToStringTest(){
+    // Given
+    Circle circle = new Circle( 5 );
+    // When
+    String result = circle.toString();
+    // Then
+    Assertions.assertEquals( "Shape: Circle, Radius: 5, Surface Area: 78.50", result );
+  }
 }

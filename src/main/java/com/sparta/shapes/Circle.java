@@ -17,4 +17,8 @@ public class Circle implements Shape {
     return radius.pow( 2 ).multiply( pi ).setScale( 2, RoundingMode.HALF_UP );
   }
 
+  @Override
+  public String toString() {
+    return "Shape: Circle, Radius: " + radius + ", Surface Area: " + getSurfaceArea();
+  }
 }
