@@ -2,13 +2,21 @@ package com.sparta.shapes;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.zip.CheckedOutputStream;
 
 public class Cube implements Shape, ThreeDimensionalShape {
 
   private final double edge;
+  private final Colour colour;
 
   public Cube( double edge ) {
     this.edge = edge;
+    this.colour = Colour.PURPLE;
+  }
+
+  public Cube( double edge, Colour colour ) {
+    this.edge = edge;
+    this.colour = colour;
   }
 
   @Override
@@ -23,7 +31,7 @@ public class Cube implements Shape, ThreeDimensionalShape {
 
   @Override
   public String toString() {
-    return "Shape: Cube, Edge: "+ edge + ", Surface Area: " + getSurfaceArea() + ", Volume: " + getVolume();
+    return "Shape: Cube, Edge: " + edge + ", Surface Area: " + getSurfaceArea() + ", Volume: " + getVolume();
   }
 
 

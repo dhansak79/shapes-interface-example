@@ -5,9 +5,16 @@ import java.math.RoundingMode;
 
 public class Circle implements Shape {
   private final int radius;
+  private final Colour colour;
 
   public Circle( int radius ) {
     this.radius = radius;
+    this.colour = Colour.PURPLE;
+  }
+
+  public Circle( int radius, Colour colour ) {
+    this.radius = radius;
+    this.colour = colour;
   }
 
   @Override

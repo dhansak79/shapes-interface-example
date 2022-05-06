@@ -8,11 +8,19 @@ public class Pyramid implements Shape, ThreeDimensionalShape {
 
   private final double height;
   private final double base;
+  private final Colour colour;
 
 
   public Pyramid( double height, double base ) {
     this.height = height;
     this.base = base;
+    this.colour = Colour.PURPLE;
+  }
+
+  public Pyramid( double height, double base, Colour colour ) {
+    this.height = height;
+    this.base = base;
+    this.colour = colour;
   }
 
   @Override

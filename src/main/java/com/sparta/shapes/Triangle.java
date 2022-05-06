@@ -6,10 +6,18 @@ import java.math.RoundingMode;
 public class Triangle implements Shape {
   private final double base;
   private final double height;
+  private final Colour colour;
 
   public Triangle( double base, double height ) {
     this.base = base;
     this.height = height;
+    this.colour = Colour.PURPLE;
+  }
+
+  public Triangle( double base, double height, Colour colour ) {
+    this.base = base;
+    this.height = height;
+    this.colour = colour;
   }
 
   @Override
