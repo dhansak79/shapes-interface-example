@@ -53,6 +53,11 @@ public class Pyramid implements Shape, ThreeDimensionalShape {
 
   @Override
   public BigDecimal getVolume() {
-    return null;
+    BigDecimal a = BigDecimal.valueOf (base).pow( 2 );
+    BigDecimal h = BigDecimal.valueOf( height).divide(new BigDecimal( "3" ));
+    return a.multiply( h ).setScale( 2,RoundingMode.HALF_UP );
+
+
+    //return null;
   }
 }

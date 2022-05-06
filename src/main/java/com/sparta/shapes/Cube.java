@@ -18,7 +18,9 @@ public class Cube implements Shape, ThreeDimensionalShape {
 
   @Override
   public BigDecimal getVolume() {
-    return BigDecimal.valueOf( edge ).pow( 3 ).setScale( 2, RoundingMode.HALF_UP );
+    return BigDecimal.valueOf( edge ).pow( 3 ).setScale( 2, RoundingMode.HALF_UP );}
 
   }
-}
+
+
+
