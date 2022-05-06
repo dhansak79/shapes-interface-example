@@ -39,7 +39,6 @@ public class Pyramid implements Shape, ThreeDimensionalShape {
   public String toString() {
     return "Shape: Pyramid, Base: " + base + ", Height: " + height + ", Surface Area: " + getSurfaceArea() + ", Volume: " + getVolume();
 
-//    "Shape: Pyramid, Base: 6.0, Height: 2.0, Surface Area: 79.27"
   }
 
 }
