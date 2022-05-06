@@ -21,6 +21,12 @@ public class Cube implements Shape, ThreeDimensionalShape {
     return BigDecimal.valueOf( edge ).pow( 3 ).setScale( 2, RoundingMode.HALF_UP );
   }
 
+  @Override
+  public String toString() {
+    return "Shape: Cube, Edge: "+ edge + ", Surface Area: " + getSurfaceArea() + ", Volume: " + getVolume();
+  }
+
+
 }
 
 

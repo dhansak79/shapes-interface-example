@@ -25,4 +25,12 @@ class CubeTest {
     assertEquals( new BigDecimal( "125.00" ), volume );
   }
 
+  @Test
+  void  getString(){
+    Cube cube = new Cube( 3 );
+    String result = cube.toString();
+    Assertions.assertEquals( "Shape: Cube, Edge: 3.0, Surface Area: 54.00, Volume: 27.00", result );
+
+  }
+
 }
