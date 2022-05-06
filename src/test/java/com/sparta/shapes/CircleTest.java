@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CircleTest {
 
@@ -13,12 +13,8 @@ public class CircleTest {
   public void surfaceAreaOfACircle() {
     Circle circle = new Circle( 15 );
     BigDecimal actualSurfaceArea = circle.getSurfaceArea();
-    Assertions.assertEquals( new BigDecimal( "706.50" ), actualSurfaceArea );
 
-    //assertJ example
-    assertThat( actualSurfaceArea ).isEqualByComparingTo( new BigDecimal( "706.5" ) );
+    assertEquals( new BigDecimal( "706.50" ), actualSurfaceArea );
   }
-
-
 
 }

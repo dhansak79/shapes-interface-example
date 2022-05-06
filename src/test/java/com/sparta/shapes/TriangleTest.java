@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 class TriangleTest {
 
@@ -12,7 +14,8 @@ class TriangleTest {
   void getSurfaceArea() {
     Triangle triangle = new Triangle(12, 7);
     BigDecimal surfaceArea = triangle.getSurfaceArea();
-    Assertions.assertEquals( new BigDecimal( "42.00" ), surfaceArea );
 
+    assertEquals( new BigDecimal( "42.00" ), surfaceArea );
   }
+
 }
