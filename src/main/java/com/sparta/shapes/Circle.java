@@ -16,7 +16,4 @@ public class Circle implements Shape {
     BigDecimal radius = BigDecimal.valueOf( this.radius );
     return radius.pow( 2 ).multiply( pi ).setScale( 2, RoundingMode.HALF_UP );
   }
-
-
-
 }
