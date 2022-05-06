@@ -18,4 +18,9 @@ public class Triangle implements Shape {
             .setScale( 2, RoundingMode.HALF_UP );
   }
 
+  @Override
+  public String toString() {
+    return "Shape: Triangle, Base: " + base + ", Height: " + height + ", Surface Area: " + getSurfaceArea();
+  }
+
 }
