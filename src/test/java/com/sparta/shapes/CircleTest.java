@@ -37,8 +37,9 @@ public class CircleTest {
   @Test
   public void twoCirclesAreTheSame() {
     // Given
-    Circle circleOne = new Circle( 5 );
+    Shape circleOne = new Circle( 5 );
     Circle circleTwo = new Circle( 5 );
+
 
     System.out.println( circleOne.hashCode() );
     System.out.println( circleTwo.hashCode() );
@@ -50,16 +51,24 @@ public class CircleTest {
     }
 
     String a = "Daniel";
-    String b = "Dan";
-    b = b + "iel";
-    System.out.println(a);
-    System.out.println(b);
+    System.out.println( a.getClass() );
 
-    if (a.equals( b )){
-      System.out.println("True");
-    } else {
-      System.out.println("False");
-    }
 
+  }
+
+  @Test
+  public void instanceOfString() {
+    String a = "Daniel";
+    System.out.println( "A is: " + a.hashCode() );
+    String b = "Daniel";
+    System.out.println( "B is: " + b.hashCode() );
+
+    b = b + " Webb";
+    System.out.println( "A is: " + a.hashCode() );
+    System.out.println( "B is: " + b.hashCode() );
+
+    a = a + " Webb";
+    System.out.println( "A is: " + a.hashCode() );
+    System.out.println( "B is: " + b.hashCode() );
   }
 }
