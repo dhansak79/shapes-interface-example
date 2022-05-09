@@ -3,6 +3,8 @@ package com.sparta.shapes;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 public class NumberOfWeeksTest {
 
   @Test
@@ -40,5 +42,14 @@ public class NumberOfWeeksTest {
 
   private int getNumberOfDays( int dayNum ) {
     return dayNum % 7; // this gives me the remainder
+  }
+
+  @Test
+  public void getLargestNumberInArray() {
+    int[] numbers = { 5000, -20, 7, 17, 13, 19, 5 };
+
+    Arrays.sort( numbers );
+    int actualResult = numbers[ numbers.length - 1 ];
+    Assertions.assertEquals( 5000, actualResult );
   }
 }
