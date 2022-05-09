@@ -33,4 +33,33 @@ public class CircleTest {
 
     Assertions.assertEquals( "I AM A CIRCLE OF RADIUS 68 AND I AM PURPLE!", actualResult );
   }
+
+  @Test
+  public void twoCirclesAreTheSame() {
+    // Given
+    Circle circleOne = new Circle( 5 );
+    Circle circleTwo = new Circle( 5 );
+
+    System.out.println( circleOne.hashCode() );
+    System.out.println( circleTwo.hashCode() );
+
+    if ( circleOne.equals( circleTwo ) ) {
+      System.out.println( "The same!" );
+    } else {
+      System.out.println( "They're not the same!!" );
+    }
+
+    String a = "Daniel";
+    String b = "Dan";
+    b = b + "iel";
+    System.out.println(a);
+    System.out.println(b);
+
+    if (a.equals( b )){
+      System.out.println("True");
+    } else {
+      System.out.println("False");
+    }
+
+  }
 }
