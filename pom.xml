@@ -59,14 +59,14 @@
                         <version>0.8</version>
                     </dependency>
                 </dependencies>
-<!--                <configuration>-->
-<!--                    <targetClasses>-->
-<!--                        <param>com.sparta.dw.greetings.*</param>-->
-<!--                    </targetClasses>-->
-<!--                    <targetTests>-->
-<!--                        <param>com.sparta.dw.greetings.*</param>-->
-<!--                    </targetTests>-->
-<!--                </configuration>-->
+                <configuration>
+                    <targetClasses>
+                        <param>com.sparta.shapes.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>com.sparta.shapes.*</param>
+                    </targetTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
