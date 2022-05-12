@@ -29,7 +29,8 @@ public class ArrayMerger {
     return mergedArray;
   }
 
-  private void addRemainingFromArray( int[] rightArray, int[] mergedArray, int rightArrayIndex, int mergedArrayIndex ) {
+  private void addRemainingFromArray( int[] rightArray, int[] mergedArray, int rightArrayIndex,
+                                      int mergedArrayIndex ) {
     while ( rightArrayIndex < rightArray.length ) {
       mergedArray[ mergedArrayIndex ] = rightArray[ rightArrayIndex ];
       rightArrayIndex++;
