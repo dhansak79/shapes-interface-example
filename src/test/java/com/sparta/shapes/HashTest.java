@@ -17,7 +17,7 @@ public class HashTest {
     // a hashset will only contain one of each thing - our override of hashCode is used to determine equality
     // if the hash is equal we don't put two identical objects in the HashSet
     // if we remove our overridden hashCode implementation we will end up with two circles in our HashSet and
-    // have inconsistency between our equals method
+    // have inconsistency with our equals method
     HashSet< Circle > circles = new HashSet<>();
     circles.add( circleOne );
     circles.add( circleTwo );
